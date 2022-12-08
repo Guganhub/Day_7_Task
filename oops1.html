@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class movie{
+
+            // a.constructor which takes string representing title,studio,rating of the movie
+            constructor(title,studio,rating){
+                this.title=title
+                this.studio=studio
+                this.rating=rating
+
+                //b. class property rating to "PG" as default when no rating is provided
+                if(rating==null){
+                    this.rating="PG"
+                }
+                else{
+                    this.rating=rating
+                }
+            }
+            getPg(arr){
+            var result=arr.filter((element)=>element.rating=="PG")
+            return result
+            
+        }
+        
+        }
+       
+       
+        var movie1= new movie("VTK","Vels_Studio","PG")
+        console.log(movie1)
+
+        var movie2= new movie("PS-1","Lyca")
+        console.log(movie2)
+
+        // d.Instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+        var movie3= new movie("Casino Roylale","Eon Productions","PG13")
+        console.log(movie3)
+
+        var movie4= new movie("Nanne varuven","V Creations","PG13")
+        console.log(movie4)
+
+        var movie5= new movie("Minions Rise of Guru","Illumination Entertainment","PG")
+        console.log(movie5)
+
+        // c.returns a new array of only those movies in the input array with a rating of "PG".
+        var arr=[movie1,movie2,movie3,movie4,movie5]
+        console.log(movie1.getPg(arr))
+
+        
+
+        
+
+        
+    </script>
+</body>
+</html>

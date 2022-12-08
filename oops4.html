@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber_Price</title>
+</head>
+<body>
+    <script>
+        //4.class to calculate the uber price.
+        class Uber{
+            constructor(distance_travelled,priceperkm){
+                this.priceperkm=priceperkm
+                this.distance_travelled=distance_travelled
+                
+            }
+            //function for calculating the price and return the price
+            getoverallprice(){
+                var overallprice=this.distance_travelled*this.priceperkm
+                return overallprice
+            }
+            
+        }
+        var u = new Uber(450,8)
+        console.log(`Distance traveled is: ${u.distance_travelled} km`)
+        console.log(`Price per km is: $${u.priceperkm}`)
+
+        //displaying the overall price for the travel.
+        console.log(`Overall price for the travel is: $${u.getoverallprice()}`)
+        
+    </script>
+</body>
+</html>
